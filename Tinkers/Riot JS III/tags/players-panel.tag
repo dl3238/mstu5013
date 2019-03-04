@@ -99,10 +99,7 @@
 		this.nominatePresident(); // STARTS the first election round...
 
 
-
-
-
-		// OBSERVER Listeners
+		// OBSERVER Listeners: you can have multiple observers to listen to the same trigger
 		observer.on('chancellor:nominated', (player) => {
 			this.nomineeChan = player;
 			this.nameOfChan = player.name;

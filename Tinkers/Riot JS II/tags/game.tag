@@ -69,6 +69,7 @@
 
 							<div class="form-group" each={ user, i in players }>
 								<input class="form-control" placeholder="Player {i+1} Name" oninput={ parent.setName } value={ user.name || "" }>
+								{ console.log(this); }
 							</div>
 							<p class="text-right">
 								<span class="float-left">{ playersReady ? "Ready" : "Waiting..."}</span>
@@ -185,6 +186,7 @@
 			this.updateReadyCount();
 			this.playersReady = !(this.readyCount < this.playerCount);
 		}
+
 
 		revealIdentities(event) {
 			this.assignPlayerRoles();

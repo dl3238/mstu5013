@@ -1,6 +1,7 @@
 <chancellor-select>
   <!-- HTML -->
 	<div class="player-row d-flex justify-content-between" each={ player, i in candidates }>
+	{console.log(this)};
 		<span>{ player.name }</span>
 		<button hide={ player.termLimited } class="btn btn-sm btn-secondary" onclick={ selectChancellor }>Select</button>
 		<span show={player.termLimited }><em>Term Limited</em></span>
@@ -12,6 +13,9 @@
 
 		this.players = opts.players;
 		this.candidates = getCandidates(this.players);
+		// Difference between candidates and players, see function getCandidates, a filter function(args){
+
+		}
 
 		selectChancellor(event) {
 			let selectedPlayer = event.item.player;
@@ -20,7 +24,10 @@
 		}
 
 		function getCandidates(players) {
-			return players.filter(player => !player.nominated);
+			return players.filter(player => !player.nominated); //ES6
+			// return players.filter(function(player){
+			// 	return !player.nominated;
+			// });
 		}
 
   </script>

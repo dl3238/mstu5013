@@ -68,6 +68,7 @@
 						<div class="card-body">
 
 							<div class="form-group" each={ user, i in players }>
+								{ console.log(this) }
 								<input class="form-control" placeholder="Player {i+1} Name" oninput={ parent.setName }>
 							</div>
 							<p class="text-right">
@@ -93,7 +94,7 @@
 
 			<!-- MAIN CONTENT: START -->
 			<div id="main" class="col-9">
-				
+
 				<!-- REVEAL TAG -->
 				<reveal if={ menuState == "partyReveal" } players={ players }></reveal>
 
@@ -104,7 +105,8 @@
 
   <script>
     // JAVASCRIPT
-		let tag = this;
+		console.log(this); let tag = this;
+		console.dir(this);
 
 		const endWWII = new Date('September 02, 1945');
 		const today = new Date();

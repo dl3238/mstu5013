@@ -82,9 +82,6 @@
 					</div>
 				</div>
 
-				<!-- GOVERNMENT STATUS -->
-				<government if={ playing }></government>
-
 				<!-- Panel for Player Stats and Actions -->
 				<players-panel if={ playing } players={ players }></players-panel>
 

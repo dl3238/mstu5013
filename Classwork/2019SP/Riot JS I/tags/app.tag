@@ -2,7 +2,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col">
-				<h1>ORIGINAL <small>By Prof. Dayton Voorhees</small></h1>
+				<h1>{noun()}ORIGINAL <small>By Prof. Dayton Voorhees</small></h1>
 			  <p>There once was a man from Nantucket.</p>
 				<p>Who kept all his cash in a bucket.</p>
 				<p>But his daughter, named Nan,</p>
@@ -39,6 +39,11 @@
     let tag = this;
 
 		this.studentName = "Alpha Romeo";
+
+		this.noun = function () {
+			var ramColor = ['blue','yellow','green','pink','purple','brown','orange'];
+			return ramColor[Math.floor((Math.random() * 10))];
+		}
 
   </script>
 

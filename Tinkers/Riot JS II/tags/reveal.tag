@@ -38,7 +38,8 @@
 	</ol>
 
 	<div class="d-flex justify-content-center flex-wrap">
-		<player-card-secret each={ players } in-review={ inReview }></player-card-secret>
+		<player-card-secret each={ p,i in players } in-review={ inReview }> {console.log(p)}</player-card-secret>
+
 	</div>
 
   <script>

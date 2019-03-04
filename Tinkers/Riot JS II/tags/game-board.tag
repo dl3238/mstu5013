@@ -69,6 +69,7 @@
 				<div class="col">
 					<h5>HAND DECK <small>click to discard</small></h5>
 					<div class="card-test" each={ policy, i in policyHandDeck } onclick={ discard }>
+  				  {console.log(i, policy)}
 						<img src="./assets/game/card-policy-{ policy }.jpg">
 						<div class="overlay overlay-{policy}"></div>
 					</div>
